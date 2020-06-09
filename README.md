@@ -9,7 +9,7 @@ A minimalistic Python boilerplate.
 ```
 $ git clone https://github.com/admiralobvious/python-boilerplate.git myapp
 $ cd myapp
-$ make build
+$ make env
 $ source venv/bin/activate
 ```
 
