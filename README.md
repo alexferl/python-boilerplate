@@ -1,5 +1,5 @@
 # python-boilerplate
-A minimalistic Python boilerplate.
+A minimalistic Python boilerplate with [pytest](https://docs.pytest.org/en/stable/), [black](https://github.com/psf/black) and [pre-commit](https://pre-commit.com/).
 
 ## Requirements
 - Python 3.7+
