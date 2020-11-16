@@ -18,4 +18,3 @@ To run the tests:
 ```
 $ make test
 ```
-
