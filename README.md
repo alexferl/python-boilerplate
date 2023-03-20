@@ -10,7 +10,7 @@ A minimalistic Python boilerplate with [pytest](https://docs.pytest.org/en/stabl
 ```
 $ git clone https://github.com/admiralobvious/python-boilerplate.git myapp
 $ cd myapp
-$ make env
+$ make dev
 $ source venv/bin/activate
 ```
 
