@@ -1,4 +1,4 @@
-.PHONY: help dev clean update test fmt
+.PHONY: help dev run clean update test fmt
 
 VENV_NAME?=venv
 VENV_ACTIVATE=. $(VENV_NAME)/bin/activate
@@ -8,6 +8,8 @@ PYTHON=${VENV_NAME}/bin/python3
 help:
 	@echo "make dev"
 	@echo "	prepare development environment, use only once"
+	@echo "make run"
+	@echo "	run application"
 	@echo "make clean"
 	@echo "	delete development environment"
 	@echo "make update"
@@ -27,6 +29,9 @@ $(VENV_NAME)/bin/activate:
 	${PYTHON} -m pip install -r dev-requirements.txt
 	$(VENV_NAME)/bin/pre-commit install
 	touch $(VENV_NAME)/bin/activate
+
+run: venv
+	${PYTHON} run.py
 
 clean:
 	rm -rf venv
