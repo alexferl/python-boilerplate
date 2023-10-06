@@ -8,10 +8,10 @@ A minimalistic Python boilerplate with [pytest](https://docs.pytest.org/en/stabl
 ## Using
 
 ```
-$ git clone https://github.com/admiralobvious/python-boilerplate.git myapp
+$ git clone https://github.com/alexferl/python-boilerplate.git myapp
 $ cd myapp
 $ make dev
-$ source venv/bin/activate
+$ pipenv shell
 ```
 
 To run the tests:
