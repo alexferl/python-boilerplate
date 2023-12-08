@@ -1,4 +1,4 @@
-.PHONY: help dev test lint pre-commit
+.PHONY: help dev test lint pre-commit freeze
 
 .DEFAULT: help
 help:
@@ -6,6 +6,8 @@ help:
 	@echo "	prepare development environment"
 	@echo "make test"
 	@echo "	run tests"
+	@echo "make freeze"
+	@echo "	freeze requirements"
 	@echo "make lint"
 	@echo "	run black"
 	@echo "make pre-commit"
@@ -15,7 +17,11 @@ dev:
 	pipenv install --dev
 
 test:
-	pipenv run pytest
+	pipenv run test
+
+freeze:
+	pipenv requirements > requirements.txt
+	pipenv requirements --dev > requirements-dev.txt
 
 lint:
 	pipenv run black .

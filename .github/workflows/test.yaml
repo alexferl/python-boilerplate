@@ -8,21 +8,18 @@ on:
       - master
 jobs:
   build:
-    runs-on: '${{ matrix.os }}'
+    runs-on: "${{ matrix.os }}"
     strategy:
       matrix:
         os:
           - ubuntu-latest
         python-version:
-          - '3.11'
+          - "3.11"
     steps:
-      - name: 'Set up Python ${{ matrix.python-version }}'
+      - name: "Set up Python ${{ matrix.python-version }}"
         uses: actions/setup-python@v2
         with:
-          python-version: '${{ matrix.python-version }}'
+          python-version: "${{ matrix.python-version }}"
       - uses: actions/checkout@v2
-      - run: pip install pytest-cov codecov
       - run: pip install -r requirements-dev.txt
-      - run: pytest
-      #- run: pytest --cov=./python_boilerplate
-      #- run: codecov
+      - run: make test
