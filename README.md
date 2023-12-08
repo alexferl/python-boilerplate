@@ -5,7 +5,6 @@ A minimalistic Python boilerplate with [black](https://github.com/psf/black) and
 - Python 3.11+
 
 ## Using
-
 ```
 $ git clone https://github.com/alexferl/python-boilerplate.git myapp
 $ cd myapp
@@ -14,7 +13,6 @@ $ pipenv shell
 ```
 
 To run the tests:
-
 ```
 $ make test
 ```
