@@ -1,18 +1,23 @@
 # python-boilerplate
-A minimalistic Python boilerplate with [black](https://github.com/psf/black) and [pre-commit](https://pre-commit.com/).
+A minimalistic Python boilerplate.
+
+Includes:
+- [black](https://black.readthedocs.io)
+- [coverage](https://coverage.readthedocs.io)
+- [mypy](https://mypy-lang.org)
+- [pre-commit](https://pre-commit.com)
 
 ## Requirements
 - Python 3.11+
 
 ## Using
-```
-$ git clone https://github.com/alexferl/python-boilerplate.git myapp
-$ cd myapp
-$ make dev
-$ pipenv shell
+```shell
+git clone https://github.com/alexferl/python-boilerplate.git myapp
+cd myapp
+make dev
 ```
 
-To run the tests:
-```
-$ make test
+See which other commands are available with:
+```shell
+make help
 ```
