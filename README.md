@@ -8,7 +8,7 @@ Includes:
 - [pre-commit](https://pre-commit.com)
 
 ## Requirements
-- Python 3.11+
+- Python 3.9+
 
 ## Using
 ```shell
