@@ -13,7 +13,7 @@ help:
 	@echo "make cover-html"
 	@echo "	run tests, coverage and open HTML report"
 	@echo "make fmt"
-	@echo "	run black code formatter"
+	@echo "	run ruff linter and formatter"
 	@echo "make type"
 	@echo "	run mypy static type checker"
 	@echo "make lock"
