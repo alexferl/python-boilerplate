@@ -2,13 +2,13 @@
 A minimalistic Python boilerplate.
 
 Includes:
-- [black](https://black.readthedocs.io)
 - [coverage](https://coverage.readthedocs.io)
 - [mypy](https://mypy-lang.org)
 - [pre-commit](https://pre-commit.com)
+- [ruff](https://docs.astral.sh/ruff/)
 
 ## Requirements
-- Python 3.9+
+- Python 3.10+
 
 ## Using
 ```shell

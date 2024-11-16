@@ -1,17 +1,30 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
-      - id: trailing-whitespace
+      - id: check-builtin-literals
+      - id: check-case-conflict
+      - id: debug-statements
       - id: end-of-file-fixer
       - id: mixed-line-ending
-        args: ['--fix=lf']
-        description: Forces to replace line ending by the UNIX 'lf' character.
-  - repo: https://github.com/psf/black
-    rev: 24.4.2
+        args: ["--fix=lf"]
+      - id: trailing-whitespace
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.7.4
     hooks:
-      - id: black
-        language_version: python3
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.13.0
+    hooks:
+      - id: mypy
+        args: [".", "--ignore-missing-imports"]
+        language: system
+        pass_filenames: false
+
   - repo: https://github.com/d-ryzhykau/pipenv-lock-pre-commit
     rev: 0.5.0
     hooks:
@@ -19,3 +32,8 @@ repos:
       - id: pipenv-verify
       - id: pipenv-requirements
       - id: pipenv-requirements-dev
+
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: v2.5.0
+    hooks:
+      - id: pyproject-fmt

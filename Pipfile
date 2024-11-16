@@ -4,13 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-
+mimesis = "==18.0.0"
 
 [dev-packages]
-black = "==24.4.2"
-coverage = "==7.6.0"
-mypy = "==1.10.1"
-pre-commit = "==3.7.1"
-
-[scripts]
-test = "python -m unittest"
+coverage = "==7.6.7"
+mypy = "==1.13.0"
+pre-commit = "==4.0.1"
+ruff = "==0.7.4"

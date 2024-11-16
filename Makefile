@@ -1,9 +1,11 @@
-.PHONY: help dev test cover cover-html fmt type lock pre-commit
+.PHONY: help dev run test cover cover-html fmt type lock pre-commit
 
 .DEFAULT: help
 help:
 	@echo "make dev"
 	@echo "	prepare development environment"
+	@echo "make run"
+	@echo "	run application"
 	@echo "make test"
 	@echo "	run tests"
 	@echo "make cover"
@@ -23,8 +25,11 @@ dev:
 	pipenv install --dev
 	pipenv run pre-commit install
 
+run:
+	pipenv run python -m app.main
+
 test:
-	pipenv run test
+	pipenv run python -m unittest
 
 cover:
 	pipenv run coverage run -m unittest
@@ -36,7 +41,7 @@ cover-html:
 	open htmlcov/index.html
 
 fmt:
-	pipenv run black .
+	pipenv run ruff check --fix && pipenv run ruff format
 
 type:
 	pipenv run mypy .
