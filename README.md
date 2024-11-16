@@ -9,6 +9,7 @@ Includes:
 
 ## Requirements
 - Python 3.10+
+- [Pipenv](https://pipenv.pypa.io/en/latest/)
 
 ## Using
 ```shell
