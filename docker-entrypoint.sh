@@ -24,9 +24,6 @@ shift
 info "Starting application: $APP_NAME"
 
 case "$APP_NAME" in
-  main)
-    CMD="python -m app.main $*"
-    ;;
   app.*)
     CMD="python -m $APP_NAME $*"
     ;;

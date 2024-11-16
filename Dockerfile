@@ -34,4 +34,4 @@ RUN chown -R appuser:appuser /app
 USER appuser
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-CMD ["main"]
+CMD ["app.main"]
