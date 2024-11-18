@@ -41,7 +41,8 @@ cover-html:
 	open htmlcov/index.html
 
 fmt:
-	pipenv run ruff check --fix && pipenv run ruff format
+	pipenv run ruff check --fix
+	pipenv run ruff format
 
 type:
 	pipenv run mypy .
