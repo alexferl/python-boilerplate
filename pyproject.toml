@@ -32,6 +32,7 @@ version = { attr = "app.__version__" }
 
 [tool.ruff]
 line-length = 120
+lint.select = [ "I" ] # Enable isort rules
 
 [tool.pyproject-fmt]
 column_width = 120
