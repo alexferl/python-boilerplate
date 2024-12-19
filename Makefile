@@ -53,4 +53,4 @@ lock:
 	pipenv requirements --dev > requirements-dev.txt
 
 pre-commit:
-	pipenv run pre-commit
+	pipenv run pre-commit run --all-files
