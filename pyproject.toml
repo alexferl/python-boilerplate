@@ -4,31 +4,40 @@ requires = [ "hatchling" ]
 
 [project]
 name = "python-boilerplate"
+version = "0.0.0"
 description = "Python boilerplate"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
 classifiers = [
-  "License :: OSI Approved :: MIT License",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
 ]
-dynamic = [
-  "version",
+dependencies = [
+  "mimesis==18.0.0",
 ]
 
-[tool.setuptools.packages.find]
-where = [ "." ]
+[dependency-groups]
+dev = [
+  "coverage==7.6.10",
+  "mypy==1.14.1",
+  "pre-commit==4.0.1",
+  "ruff==0.8.5",
+]
+
+[tool.hatch.build.targets.wheel]
+include = [ "app" ]
 exclude = [ "tests*", "tests.*" ]
 
-[tool.setuptools.package-data]
-"*" = [ "LICENSE" ]
+[tool.hatch.build.targets.sdist]
+include = [ "app" ]
+exclude = [ "tests*", "tests.*" ]
 
-[tool.setuptools.dynamic]
-version = { attr = "app.__version__" }
+[tool.hatch.build]
+include = [ "LICENSE" ]
 
 [tool.ruff]
 line-length = 120

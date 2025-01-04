@@ -8,8 +8,8 @@ Includes:
 - [ruff](https://docs.astral.sh/ruff/)
 
 ## Requirements
-- Python 3.10+
-- [Pipenv](https://pipenv.pypa.io/en/latest/)
+- Python 3.13+
+- [uv](https://docs.astral.sh/uv/)
 
 ## Using
 ```shell

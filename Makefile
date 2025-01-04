@@ -22,35 +22,30 @@ help:
 	@echo "	run pre-commit hooks"
 
 dev:
-	pipenv install --dev
-	pipenv run pre-commit install
+	uv sync --all-extras --dev
+	uv run pre-commit install
 
 run:
-	pipenv run python -m app.main
+	uv run python -m app.main
 
 test:
-	pipenv run python -m unittest
+	uv run python -m unittest
 
 cover:
-	pipenv run coverage run -m unittest
-	pipenv run coverage report -m
+	uv run coverage run -m unittest
+	uv run coverage report -m
 
 cover-html:
-	pipenv run coverage run -m unittest
-	pipenv run coverage html
+	uv run coverage run -m unittest
+	uv run coverage html
 	open htmlcov/index.html
 
 fmt:
-	pipenv run ruff check --fix
-	pipenv run ruff format
+	uv run ruff check --fix
+	uv run ruff format
 
 type:
-	pipenv run mypy .
-
-lock:
-	pipenv lock
-	pipenv requirements > requirements.txt
-	pipenv requirements --dev > requirements-dev.txt
+	uv run mypy .
 
 pre-commit:
-	pipenv run pre-commit
+	uv run pre-commit run --all-files

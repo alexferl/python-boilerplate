@@ -23,27 +23,26 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.7.4
+    rev: v0.8.5
     hooks:
       - id: ruff
         args: ["--fix", "--exit-non-zero-on-fix"]
       - id: ruff-format
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.13.0
+    rev: v1.14.1
     hooks:
       - id: mypy
         args: [".", "--ignore-missing-imports"]
         language: system
         pass_filenames: false
 
-  - repo: https://github.com/d-ryzhykau/pipenv-lock-pre-commit
-    rev: 0.5.0
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.5.14
     hooks:
-      - id: pipenv-lock
-      - id: pipenv-verify
-      - id: pipenv-requirements
-      - id: pipenv-requirements-dev
+      - id: uv-lock
+      - id: uv-export
+        args: ["-o", "requirements.txt", "--no-hashes", "-q"]
 
   - repo: https://github.com/tox-dev/pyproject-fmt
     rev: v2.5.0
