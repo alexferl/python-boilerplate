@@ -8,7 +8,7 @@ Includes:
 - [ruff](https://docs.astral.sh/ruff/)
 
 ## Requirements
-- Python 3.13+
+- Python 3.10+
 - [uv](https://docs.astral.sh/uv/)
 
 ## Using

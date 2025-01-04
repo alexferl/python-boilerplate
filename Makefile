@@ -1,4 +1,4 @@
-.PHONY: help dev run test cover cover-html fmt type lock pre-commit
+.PHONY: help dev run build test cover cover-html fmt type lock pre-commit
 
 .DEFAULT: help
 help:
@@ -6,6 +6,8 @@ help:
 	@echo "	prepare development environment"
 	@echo "make run"
 	@echo "	run application"
+	@echo "make build"
+	@echo "	build application"
 	@echo "make test"
 	@echo "	run tests"
 	@echo "make cover"
@@ -27,6 +29,9 @@ dev:
 
 run:
 	uv run python -m app.main
+
+build:
+	uv build
 
 test:
 	uv run python -m unittest
