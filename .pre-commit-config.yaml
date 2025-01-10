@@ -41,8 +41,6 @@ repos:
     rev: 0.5.14
     hooks:
       - id: uv-lock
-      - id: uv-export
-        args: ["-o", "requirements.txt", "--no-hashes", "-q"]
 
   - repo: https://github.com/tox-dev/pyproject-fmt
     rev: v2.5.0
