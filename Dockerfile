@@ -29,7 +29,7 @@ WORKDIR /app
 
 RUN useradd -ms /bin/bash app
 
-COPY --chown=app:app /build/docker-entrypoint.sh /usr/local/bin/
+COPY --from=builder --chown=app:app /build/docker-entrypoint.sh /usr/local/bin/
 COPY --from=builder --chown=app:app /build /app
 
 ENV PATH="/app/.venv/bin:$PATH"
