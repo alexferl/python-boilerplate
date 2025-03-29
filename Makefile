@@ -1,4 +1,4 @@
-.PHONY: help dev run build test cover cover-html fmt type lock pre-commit
+.PHONY: help dev run build test cover cover-html fmt type pre-commit
 
 .DEFAULT: help
 help:
@@ -18,8 +18,6 @@ help:
 	@echo "	run ruff linter and formatter"
 	@echo "make type"
 	@echo "	run mypy static type checker"
-	@echo "make lock"
-	@echo "	lock requirements"
 	@echo "make pre-commit"
 	@echo "	run pre-commit hooks"
 
