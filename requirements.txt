@@ -2,18 +2,32 @@
 #    uv export -o requirements.txt --no-hashes
 -e .
 cfgv==3.4.0
-coverage==7.7.1
+    # via pre-commit
+coverage==7.9.1
 distlib==0.3.9
+    # via virtualenv
 filelock==3.16.1
+    # via virtualenv
 identify==2.6.4
+    # via pre-commit
 mimesis==18.0.0
-mypy==1.15.0
+    # via python-boilerplate
+mypy==1.16.1
 mypy-extensions==1.0.0
+    # via mypy
 nodeenv==1.9.1
+    # via pre-commit
+pathspec==0.12.1
+    # via mypy
 platformdirs==4.3.6
+    # via virtualenv
 pre-commit==4.2.0
 pyyaml==6.0.2
-ruff==0.11.2
+    # via pre-commit
+ruff==0.11.13
 tomli==2.2.1 ; python_full_version < '3.11'
+    # via mypy
 typing-extensions==4.12.2
+    # via mypy
 virtualenv==20.28.1
+    # via pre-commit
