@@ -27,8 +27,6 @@ pre-commit==4.5.0
 pyyaml==6.0.2
     # via pre-commit
 ruff==0.14.8
-tomli==2.2.1 ; python_full_version < '3.11'
-    # via mypy
 typing-extensions==4.12.2
     # via mypy
 virtualenv==20.28.1
