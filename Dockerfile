@@ -19,14 +19,15 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-RUN useradd -ms /bin/bash app
+RUN groupadd -g 65532 nonroot && \
+    useradd -u 65532 -g 65532 -s /usr/sbin/nologin -m nonroot
 
-COPY --from=builder --chown=app:app /build/docker-entrypoint.sh /usr/local/bin/
-COPY --from=builder --chown=app:app /build /app
+COPY --from=builder --chown=nonroot:nonroot /build/docker-entrypoint.sh /usr/local/bin/
+COPY --from=builder --chown=nonroot:nonroot /build /app
 
 ENV PATH="/app/.venv/bin:$PATH"
 
-USER app
+USER nonroot
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["app.main"]

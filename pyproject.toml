@@ -20,10 +20,10 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-  "coverage==7.12.0",
-  "mypy==1.19.0",
-  "pre-commit==4.5.0",
-  "ruff==0.14.8",
+  "coverage==7.13.0",
+  "mypy==1.19.1",
+  "pre-commit==4.5.1",
+  "ruff==0.14.10",
 ]
 
 [tool.hatch.build.targets.wheel]
