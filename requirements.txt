@@ -29,5 +29,5 @@ pyyaml==6.0.2
 ruff==0.14.10
 typing-extensions==4.12.2
     # via mypy
-virtualenv==20.28.1
+virtualenv==20.35.4
     # via pre-commit
